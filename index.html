@@ -3,14 +3,546 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>stark-editor</title>
+    <meta name="viewport" content="initial-scale=.5, width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description"
+        content="Stark is a free rich text editor for websites, a super simple, easy-to-use, tiny, and lightweight WYSIWYG editor, free from heavy libraries and superfluous features.">
+    <meta name="keywords" content="rich text editor, WYSIWYG editor">
+
+    <link rel="stylesheet" href="https://www.fastchooser.com/outer/css/stark-editor.css">
+
+    <title>Stark Editor</title>
+
 </head>
 
-<body>
-    <h1>Stark Editor</h1>
-    <a href="https://www.fastchooser.com/Rich-Text-Editor">https://www.fastchooser.com/Rich-Text-Editor</a>
+<body class="se-light-theme" style="text-align:center;background-color:rgb(224,225,244);color:rgb(22,23,20)">
+
+    <h1 style="margin:auto;text-align:center;width:270px;">Stark Editor</h1>
+
+    <section class='se-bg-content box-shadow'
+        style="font-size:1.2rem;max-width:610px;margin:10px auto;padding:9px 12px 1px 12px;text-align:justify;">
+        <p>Stark is a free rich text editor for websites, a super simple, easy-to-use, tiny, and
+            lightweight WYSIWYG editor, free from heavy libraries (written in vanilla JavaScript) and superfluous
+            features
+            like tables, histograms, charts,
+            or diagrams.</p>
+    </section>
+
+    <!-- STARK EDITOR -->
+    <section class="se-stark-editor1 se-se se-border se-bg-content grid-on" style='margin:40px auto;max-width:670px;'>
+
+        <section class="se-toolbar">
+
+            <!-- bold, italic, stroke, small-caps, family, size, headers, colog, bg -->
+            <section class="se-toolbar-block se-button-bg">
+                <button class="se-font se-bg-bold se-border se-press-button" value="fontWeight:700"
+                    title="bold"></button>
+                <button class="se-font se-bg-italic se-border se-press-button" value="fontStyle:italic"
+                    title="italic"></button>
+                <button class="se-font se-bg-strikethrough se-border se-press-button"
+                    value="textDecoration:line-through" title="strikethrough"></button>
+                <button class="se-font se-bg-small-caps se-border se-press-button" value="fontVariant:small-caps"
+                    title="small caps"></button>
+                <button class="se-font-family se-bg-font-family se-border se-press-button" title="font"></button>
+                <button class="se-font-size se-bg-font-size se-border se-press-button" title="font size"></button>
+                <button class="se-color se-bg-fontcolor se-border se-press-button" title="font color"></button>
+                <button class="se-bg-color se-bg-background se-border se-press-button"
+                    title="background color"></button>
+            </section>
+
+            <section class="se-toolbar-block se-button-bg">
+                <button class="se-align se-bg-align-justify se-border se-press-button" value="justify"></button>
+                <button class="se-align se-bg-align-left se-border se-press-button" value="left"></button>
+                <button class="se-align se-bg-align-center se-border se-press-button" value="center"></button>
+                <button class="se-align se-bg-align-right se-border se-press-button" value="right"></button>
+            </section>
+
+            <section class="se-toolbar-block se-button-bg">
+                <button class="se-link se-bg-link se-border se-press-button" title="link"></button>
+                <button class="se-image se-bg-image se-border se-press-button" title="image"></button>
+                <button class="se-movie se-bg-movie se-border se-press-button" title="video"></button>
+            </section>
+
+            <section class="se-toolbar-block se-button-bg">
+                <button class="se-headers se-bg-headers se-border se-press-button" title="headers"></button>
+            </section>
+
+            <section class="se-toolbar-block se-button-bg">
+                <button class="se-grid se-bg-grid se-border se-press-button" title="grid"></button>
+            </section>
+
+        </section><!-- se-toolbar -->
+
+        <!-- inside se-stark-editor popups, pickers -->
+        <div class="se-font-family-picker se-picker">
+            <button class="se-font se-family se-press-button se-bg-popup se-border se-color-font"
+                value="fontFamily:Arial" style="font-family:Arial" type="button">Arial</button>
+            <button class="se-font se-family se-press-button se-bg-popup se-border se-color-font"
+                value="fontFamily:Verdana" style="font-family:Verdana" type="button">Verdana</button>
+            <button class="se-font se-family se-press-button se-bg-popup se-border se-color-font"
+                value="fontFamily:Helvetica" style="font-family:Helvetica" type="button">Helvetica</button>
+            <button class="se-font se-family se-press-button se-bg-popup se-border se-color-font"
+                value="fontFamily:Tahoma" style="font-family:Tahoma" type="button">Tahoma</button>
+            <button class="se-font se-family se-press-button se-bg-popup se-border se-color-font"
+                value="fontFamily:Trebuchet MS" style="font-family:Trebuchet MS" type="button">Trebuchet MS</button>
+            <button class="se-font se-family se-press-button se-bg-popup se-border se-color-font"
+                value="fontFamily:Times New Roman" style="font-family:Times New Roman" type="button">Times New
+                Roman</button>
+            <button class="se-font se-family se-press-button se-bg-popup se-border se-color-font"
+                value="fontFamily:Georgia" style="font-family:Georgia" type="button">Georgia</button>
+            <button class="se-font se-family se-press-button se-bg-popup se-border se-color-font"
+                value="fontFamily:Garamond" style="font-family:Garamond" type="button">Garamond</button>
+            <button class="se-font se-family se-press-button se-bg-popup se-border se-color-font"
+                value="fontFamily:Courier New" style="font-family:Courier New" type="button">Courier
+                New</button>
+            <button class="se-font se-family se-press-button se-bg-popup se-border se-color-font"
+                value="fontFamily:Brush Script MT" style="font-family:Brush Script MT" type="button">Brush Script
+                MT</button>
+            <button class="se-font se-family se-press-button se-bg-popup se-border se-color-font"
+                value="fontFamily:Comic Sans MS" style="font-family:Comic Sans Ms" type="button">Comic Sans Ms</button>
+        </div><!-- se-font-family-picker -->
+
+        <div class="se-font-size-picker se-picker">
+            <button class="se-font se-size se-bg-popup se-color-font se-border se-box-shadow se-press-button"
+                value="fontSize:3rem" style="font-size:3rem;" type="button">huge</button>
+            <button class="se-font se-size se-bg-popup se-color-font se-border se-box-shadow se-press-button"
+                value="fontSize:2rem" style="font-size:2rem;" type="button">large</button>
+            <button class="se-font se-size se-bg-popup se-color-font se-border se-box-shadow se-press-button"
+                value="fontSize:1.5rem" style="font-size:1.3rem;" type="button">bigger</button>
+            <button class="se-font se-size se-bg-popup se-color-font se-border se-box-shadow se-press-button"
+                value="fontSize:" style="font-size:1rem;" type="button">normal</button>
+            <button class="se-font se-size se-bg-popup se-color-font se-border se-box-shadow se-press-button"
+                value="fontSize:1rem" style="font-size:.9rem;" type="button">small</button>
+            <button class="se-font se-size se-bg-popup se-color-font se-border se-box-shadow se-press-button"
+                value="fontSize:.7rem" style="font-size:.8rem;" type="button">tiny</button>
+            <button class="se-font se-size se-bg-popup se-color-font se-border se-box-shadow se-press-button"
+                value="verticalAlign:8px" style="font-size:1rem;" type="button">super<span
+                    style="vertical-align:8px;font-size:.8rem">script</span></button>
+            <button class="se-font se-size se-bg-popup se-color-font se-border se-box-shadow se-press-button"
+                value="verticalAlign:-8px" style="font-size:1rem" type="button">sub<span
+                    style="vertical-align:-8px;font-size:.8rem">script</span></button>
+        </div><!-- se-font-size-picker -->
+
+        <div class="se-color-picker se-box-shadow se-bg-popup">
+            <button class="se-font se-color-brick" value="color:rgb(178,34,34)"
+                style="background-color:rgb(178,34,34);"></button>
+            <button class="se-font se-color-brick" value="color:rgb(255,0,0)"
+                style="background-color:rgb(255,0,0);"></button>
+            <button class="se-font se-color-brick" value="color:rgb(244,164,96)"
+                style="background-color:rgb(244,164,96);">
+            </button>
+            <button class="se-font se-color-brick" value="color:rgb(255,140,0)"
+                style="background-color:rgb(255,140,0);"></button>
+            <button class="se-font se-color-brick" value="color:rgb(218,165,32)"
+                style="background-color:rgb(218,165,32);">
+            </button>
+            <button class="se-font se-color-brick" value="color:rgb(255,255,0)"
+                style="background-color:rgb(255,255,0);"></button>
+            <button class="se-font se-color-brick" value="color:rgb(46,139,87)"
+                style="background-color:rgb(46,139,87);"></button>
+            <button class="se-font se-color-brick" value="color:rgb(0,255,0)"
+                style="background-color:rgb(0,255,0);"></button>
+            <button class="se-font se-color-brick" value="color:rgb(173,255,47)"
+                style="background-color:rgb(173,255,47);">
+            </button>
+            <button class="se-font se-color-brick" value="color:rgb(0,255,255)"
+                style="background-color:rgb(0,255,255);"></button>
+            <button class="se-font se-color-brick" value="color:rgb(32,178,170)"
+                style="background-color:rgb(32,178,170);">
+            </button>
+            <button class="se-font se-color-brick" value="color:rgb(30,144,255)"
+                style="background-color:rgb(30,144,255);">
+            </button>
+            <button class="se-font se-color-brick" value="color:rgb(100,149,237)"
+                style="background-color:rgb(100,149,237);">
+            </button>
+            <button class="se-font se-color-brick" value="color:rgb(65,105,225)"
+                style="background-color:rgb(65,105,225);">
+            </button>
+            <button class="se-font se-color-brick" value="color:rgb(0,0,139)"
+                style="background-color:rgb(0,0,139);"></button>
+            <button class="se-font se-color-brick" value="color:rgb(75,0,130)"
+                style="background-color:rgb(75,0,130);"></button>
+            <button class="se-font se-color-brick" value="color:rgb(255,182,193)"
+                style="background-color:rgb(255,182,193);">
+            </button>
+            <button class="se-font se-color-brick" value="color:rgb(199,21,133)"
+                style="background-color:rgb(199,21,133);">
+            </button>
+            <button class="se-font se-color-brick" value="color:rgb(245,245,220)"
+                style="background-color:rgb(245,245,220);">
+            </button>
+            <button class="se-font se-color-brick" value="color:rgb(255,255,240)"
+                style="background-color:rgb(255,255,240);">
+            </button>
+            <button class="se-font se-color-brick se-bg-default-color" value="color:"
+                style="background-color:rgba(230, 228, 241, 0.829);"></button>
+        </div><!-- se-color-picker -->
+
+        <div class="se-bg-color-picker se-box-shadow se-bg-popup">
+            <button class="se-font se-color-brick" value="backgroundColor:rgb(139,0,0)"
+                style="background-color:rgb(139,0,0);"></button>
+            <button class="se-font se-color-brick" value="backgroundColor:rgb(255,69,0)"
+                style="background-color:rgb(255,69,0);"></button>
+            <button class="se-font se-color-brick" value="backgroundColor:rgb(250,128,114)"
+                style="background-color:rgb(250,128,114);">
+            </button>
+            <button class="se-font se-color-brick" value="backgroundColor:rgb(255,255,0)"
+                style="background-color:rgb(255,255,0);"></button>
+            <button class="se-font se-color-brick" value="backgroundColor:rgb(46,139,87)"
+                style="background-color:rgb(46,139,87);"></button>
+            <button class="se-font se-color-brick" value="backgroundColor:rgb(0,255,0)"
+                style="background-color:rgb(0,255,0);"></button>
+            <button class="se-font se-color-brick" value="backgroundColor:rgb(0,255,255)"
+                style="background-color:rgb(0,255,255);"></button>
+            <button class="se-font se-color-brick" value="backgroundColor:rgb(30,144,255)"
+                style="background-color:rgb(30,144,255);">
+            </button>
+            <button class="se-font se-color-brick" value="backgroundColor:rgb(0,0,139)"
+                style="background-color:rgb(0,0,139);"></button>
+            <button class="se-font se-color-brick" value="backgroundColor:rgb(123,104,238)"
+                style="background-color:rgb(123,104,238);">
+            </button>
+            <button class="se-font se-color-brick" value="backgroundColor:rgb(255,0,255)"
+                style="background-color:rgb(255,0,255);"></button>
+            <button class="se-font se-color-brick" value="backgroundColor:rgb(138,43,226)"
+                style="background-color:rgb(138,43,226);">
+            </button>
+            <button class="se-font se-color-brick" value="backgroundColor:rgb(199,21,133)"
+                style="background-color:rgb(199,21,133);">
+            </button>
+            <button class="se-font se-color-brick" value="backgroundColor:rgb(255,245,238)"
+                style="background-color:rgb(255,245,238);">
+            </button>
+            <button class="se-font se-color-brick" value="backgroundColor:rgb(245,245,220)"
+                style="background-color:rgb(245,245,220);">
+            </button>
+            <button class="se-font se-color-brick" value="backgroundColor:rgb(112,128,144)"
+                style="background-color:rgb(112,128,144);">
+            </button>
+            <button class="se-font se-color-brick" value="backgroundColor:rgb(112,128,144)"
+                style="background-color:rgb(127, 112, 144);">
+            </button>
+            <button class="se-font se-color-brick" value="backgroundColor:rgb(112,128,144)"
+                style="background-color:rgb(85, 117, 139);">
+            </button>
+            <button class="se-font se-color-brick" value="backgroundColor:rgb(255,222,173)"
+                style="background-color:rgb(255,222,173);">
+            </button>
+            <button class="se-font se-color-brick" value="backgroundColor:rgb(188,143,143)"
+                style="background-color:rgb(188,143,143);">
+            </button>
+            <button class="se-font se-color-brick se-bg-default-color" value="backgroundColor:"
+                style="background-color:rgba(230, 228, 241, 0.829);"></button>
+        </div><!-- se-bg-color-picker -->
+
+        <div class="se-link-picker se-border se-bg-popup">
+            <div class="se-internal-links se-border se-bg-content">
+                <div class="se-link-item">
+                    <!-- example link one -->
+                </div>
+            </div>
+            <textarea type="text" placeholder="link title"
+                class="se-input-text se-border se-color-font se-bg-content"></textarea>
+            <textarea type="text" placeholder="url or heading"
+                class="se-input-link se-border se-color-font se-bg-content"></textarea>
+            <div style="margin:10px 0 3px 0;">
+                <span style="cursor:pointer;padding:3px 5px;margin-right:15px;" class="se-new-tab">open in new
+                    tab</span>
+                <span class="se-no-follow" style="cursor:pointer;padding:3px 5px;">no follow
+                    attribute</span>
+            </div>
+            <div style="display:inline-block;margin-top:14px;">
+                <button class="se-del-link se-button-bg se-border se-press-button se-color-font">delete</button>
+                <button class="se-apply-link se-button-bg se-border se-press-button se-color-font">apply</button>
+            </div>
+            <div class="se-follow-link">follow link</div>
+        </div><!-- se-link-picker -->
+
+        <div class="se-image-picker se-box-shadow se-bg-popup">
+            <textarea type="url" placeholder="link to img or"
+                class="se-img-url se-bg-content se-color-font se-box-shadow se-border"></textarea>
+            <form class="se-img-form" method="post" action="/upload" enctype="multipart/form-data">
+                <label for="se-img-file" class="se-img-label se-button-bg se-color-font se-box-shadow">upload a photo
+                    from
+                    pc</label>
+                <input class="se-img-file" type="file" name="img" />
+            </form>
+            <textarea class="se-img-alt se-bg-content se-color-font se-box-shadow se-border" type="text"
+                placeholder="alt for image" style="resize:none;"></textarea>
+            <div>
+                <span class="se-align-arr" value="left">&#8656;</span>
+                <span class="se-align-arr se-button-bg" value="inside">&#9746;</span>
+                <span class="se-align-arr" value="right">&#8658;</span>
+            </div>
+            <input type="submit" value="apply"
+                class="se-apply-img se-border se-button-bg se-color-font se-press-button" />
+        </div><!-- se-image-picker -->
+
+        <div class="se-movie-picker se-box-shadow se-bg-popup">
+            <textarea type="url" placeholder="link to youtube video"
+                class="se-video-url se-bg-content se-color-font se-box-shadow se-border"></textarea>
+            <input type="submit" value="apply"
+                class="se-apply-movie se-border se-button-bg se-color-font se-press-button" />
+        </div><!-- se-movie-picker -->
+
+        <div class="se-headers-picker se-picker">
+            <button class="se-header se-bg-popup se-color-font se-border se-box-shadow se-press-button" value="h2"
+                style="font-size:1.5rem;" type="button">H2</button>
+            <button class="se-header se-bg-popup se-color-font se-border se-box-shadow se-press-button" value="h3"
+                style="font-size:1.3rem;" type="button">H3</button>
+            <button class="se-header se-bg-popup se-color-font se-border se-box-shadow se-press-button" value="h4"
+                style="font-size:1.1rem;" type="button">H4</button>
+            <button class="se-header se-bg-popup se-color-font se-border se-box-shadow se-press-button" value="h5"
+                style="font-size:0.9rem" type="button">H5</button>
+            <button class="se-header se-bg-popup se-color-font se-border se-box-shadow se-press-button" value="p"
+                style="font-size:1.0rem;" type="button">P</button>
+            <button class="se-header se-bg-popup se-color-font se-border se-box-shadow se-press-button" value="div"
+                style="font-size:1.0rem;" type="button">DIV</button>
+            <button class="se-list se-header se-bg-popup se-color-font se-border se-box-shadow se-press-button"
+                value="ul" style="font-size:1.0rem;" type="button">List</button>
+        </div><!-- se-headers-picker -->
+
+        <div class="se-list-picker se-picker se-box-shadow se-bg-popup">
+            <span class="se-list-type se-list-ul se-box-shadow" value="none">none</span>
+            <span class="se-list-type se-list-ul se-box-shadow" value="square">&#9632;</span>
+            <span class="se-list-type se-list-ul se-box-shadow" value="circle">&#9675;</span>
+            <span class="se-list-type se-list-ul se-box-shadow" value="disc">&bull;</span><!-- same bullet -->
+            <span class="se-list-type se-list-ol se-box-shadow" value="decimal">1</span>
+            <span class="se-list-type se-list-ol se-box-shadow" value="upper-roman">I</span>
+            <span class="se-list-type se-list-ol se-box-shadow" value="lower-roman">i</span>
+            <span class="se-list-type se-list-ol se-box-shadow" value="upper-latin">A</span>
+            <span class="se-list-type se-list-ol se-box-shadow" value="lower-latin">a</span>
+        </div><!-- se-list-picker -->
+
+        <!--  -->
+        <span class="se-article-length" style="position:absolute;bottom:-30px;right:5px;font-size:1.2rem;">0</span>
+        <!-- SEDITOR -->
+        <div class="se-editor se-article se-box-shadow se-bg-content se-color-font" contenteditable="true">
+            <p><b>bold </b><i>cursive I </i><del>deleted </del><em>emphasize </em><strong>strong </strong><s> no longer
+                    correct</s></p>
+            <p><a href="https://www.fastchooser.com/">www.fastchooser.com</a></p>
+            <ul>
+                <li><a href="#header-with-the-link-name">link to header</a></li>
+                <li>second list item</li>
+            </ul>
+            <p><img src="https://www.fastchooser.com/happy.png" alt="there is a certain value" /></p>
+            <h3 style="text-align: center;"><a name="header-with-link-name">header with the link name</a></h3>
+            <p style="text-align: right;">last paragraph</p>
+        </div>
+
+    </section>
+
+    <section class='se-bg-content box-shadow'
+        style="font-size:1.2rem;max-width:610px;margin:30px auto;padding:9px 12px 1px 12px;text-align:justify;">
+        <p>Today's browsers unfortunately still lack inbuilt rich text editors. Back in the day, due to security
+            requirements, the capabilities of the client side were severely limited. For this reason, a text contained
+            nothing but letters. Then the population of the planet developed and became more literate, and now more and
+            more
+            website visitors are eager to use different fonts, colors, links, pictures, videos, etc. On the other hand,
+            many
+            popular networks still don't provide opportunities for any text editing.</p>
+        <p>Some sites suggest using special tags for text formatting, some programs are so bulky and complicated that
+            you
+            don't want to use them. In most cases, comment forms don't offer any frills. If you need a compact simple
+            rich
+            text editor, here it is.</p>
+
+        <ul style="text-align:left;font-size:1.3rem;list-style:square;margin:20px auto;">
+            <li><a href="#Free-Rich-Text-Editor">Free Rich Text Editor</a></li>
+            <li><a href="#The-Structure-and-Features-of-our-WYSIWYG-Text-Editor">The Structure and Features of our
+                    WYSIWYG
+                    Text Editor</a></li>
+            <li><a href="#How-to-Download-and-Install-the-Text-Editor">How to Download and Install the Text Editor</a>
+            </li>
+            <li><a href="#WYSIWYG-Editor-Customization">WYSIWYG Editor Customization</a></li>
+        </ul>
+
+
+
+        <div style="text-align:center;"><img loading="lazy" width="500" height="135"
+                src="https://www.fastchooser.com/pic/rich-text-editor.jpg" alt="rich text editor"
+                style="max-width: 98%;height: auto;" />
+        </div>
+
+        <h2><a name="Free-Rich-Text-Editor">Free Rich Text Editor</a></h2>
+        <p>The functionality of the Stark editor includes everything you need to write professional, high-quality,
+            SEO-effective articles for sites like the young <a href="https://www.fastchooser.com/">Fastchooser</a>
+            project.
+            It can also be used for writing posts or comments.</p>
+        <p>If your site contains many articles and involves rich text communication between its users, then you can't
+            get by
+            without a text editor. There are many paid and free rich editors on the Internet and even word processors.
+            However, it’s hard to find a simple, small, free rich text editor with easy installation and customization,
+            and
+            without redundant features that are unnecessary for writing SEO-optimized articles and especially comments,
+            based on our own experience.</p>
+        <p>If you look for something like this, the Stark Editor is for you. Watch the video on youtube about how our <a
+                href="https://www.youtube.com/watch?v=9lrhT3PfQoo" target="_blank">rich text editor</a> works.</p>
+
+        <h2><a name="The-Structure-and-Features-of-our-WYSIWYG-Text-Editor">The Structure and Features of our WYSIWYG
+                Text
+                Editor</a></h2>
+        <p>The Stark editor works with Google Chrome, Mozilla Firefox, and Chromium-based browsers on computers and
+            smartphones. It is fast and secure. All inappropriate tags don’t exist for our program. That’s why any text
+            is
+            harmless for it.</p>
+        <p>Fonts come without special tags. A tag SPAN is modified instead. When a copied text is inserted, the Stark
+            editor
+            recognizes STRONG, B, EM, I, DEL, S and automatically transfers them into necessary styles. For example,
+            <b>&ltB&gt;some
+                text&lt;B&gt;</b> = <br><SPAN style="font-weight:700">&lt;span style="font-weight:700"&gt;some
+                text&lt;span&gt;</SPAN>
+        </p>
+        <p>Each paragraph has the first line indented by default. For a paragraph without indentation, use a DIV.</p>
+        <div style="text-align: center;"><img loading="lazy" width="308" height="433"
+                src="https://www.fastchooser.com/pic/Headers-div.jpg" alt="text editor's headers" />
+        </div>
+        <p>The practice has shown that no one uses “insert” to write over the text, so this function does not work in
+            the
+            Stark editor.</p>
+        <p>All headers (H2 — H7) can be only internal links. For external links, use plain text with any font and size.
+        </p>
+        <p>Strikethrough can’t be applied to a link. There is also no button for underlining to avoid mixing up an
+            underlined phrase with a link.</p>
+        <p>Headers, links, and list items can’t be separated into editable parts. It’s illogical and looks unattractive.
+        </p>
+        <p>To change the color or font attribute of a header or link, you don't have to highlight it. Just put a cursor
+            on
+            it and make changes.</p>
+        <p>To turn an unordered list into an ordered one or vice versa, click on the sign or digit at the beginning of a
+            line and choose a preferred option.</p>
+        <div style="text-align: center;"><img loading="lazy" width="430" height="430"
+                src="https://www.fastchooser.com/pic/List-customization.jpg" alt="text editor's list" />
+        </div>
+        <p>For uploading images, FormData “.se-img-form” with the name “img” and the file, picked by a user, go to the
+            server folder “/upload”.</p>
+        <p>The server side after uploading and saving the image should return an object comprising a source with a URL:
+        </p>
+        <p> { src: URL }</p>
+        <p>If the URL is equal to the empty string “”, then the image could not be uploaded for some reason, and
+            nothing will happen.</p>
+        <p>All images have the attribute [loading="lazy"], and the width and height are automatically set.</p>
+        <p>As for the video links, only videos from YouTube are allowed for now. In the future, it may change.</p>
+        <p>You can also use the grid to separate text into sections for your convenience.</p>
+        <div style="text-align: center;"><img loading="lazy" width="750" height="422"
+                src="https://www.fastchooser.com/pic/Text-editor-grid.jpg" alt="rich text editor's grid"
+                style="max-width: 98%;height: auto;" />
+        </div>
+
+        <h2><a name="How-to-Download-and-Install-the-Text-Editor">How to Download and Install the Text Editor</a></h2>
+        <p>The installation of the Stark editor is much easier compared to the installation of most rich text editors
+            that
+            takes too much time and effort because you have to learn a lot about how their program, overloaded with
+            various
+            APIs, works before you can customize it as you wish and use it. For example, <a
+                href="https://quilljs.com/">Quill</a> that we used to have on our site.</p>
+        <p>Here you understand that it's easier to learn to code and make such an editor yourself.</p>
+        <p style="text-align: left;">The only API-functions, our program has, are the following:<br>
+            <span style="background-color: rgb(21, 62, 109);color:rgb(204, 192, 28)">getObject(), setObject(object),
+                getHTML(), setHTML(HTML), getText(), length()</span>
+        </p>
+        <p>While the advantage of copying an object is the volume without tags, the disadvantage is additional fields,
+            parameters for search in the database. Using raw HTML code is more convenient in our opinion, but today
+            object
+            programming is used everywhere, so it is possible to use it here as well.</p>
+        <p>There are probably no rich text editors that can be installed by anyone who is not familiar with coding at
+            all.
+            Sure, our text editor is made for developers. But the process of installation doesn’t have to be
+            frustrating,
+            does it?</p>
+        <p>On this page, you’ll find three files (HTML, CSS, JS) to download. After downloading them, execute the
+            initialization in the JS file as described further, and you can use the editor.</p>
+        <p>Note that we don’t know what CMS you use if you use any. So we can’t give recommendations about installation
+            through your CMS and placing the files on your computer. We use Node.js. Our rich text editor was written in
+            JavaScript.</p>
+        <p>
+            <a href="https://www.fastchooser.com/outer/js/stark-editor.js"
+                title="download stark-editor.js">stark-editor.js</a> - 33Kb<br>
+        </p>
+        <p>
+            <a href="https://www.fastchooser.com/outer/css/stark-editor.css"
+                title="download stark-editor.css">stark-editor.css</a> - 9-12Kb<br>
+        </p>
+        <p>
+            stark-editor.html - 10-20Kb
+            Welcome, copy html-object ".se-se" from the console of your browser<br>
+        </p>
+        <p>
+            <a href="https://www.fastchooser.com/stark-editor-sprite.png">menu icons</a> - 7.76Kb
+        </p>
+        </div>
+        <p style="color:rgb(255, 157, 0);background-color:rgb(22, 22, 143);">We already use this <a
+                href="https://www.fastchooser.com/WYSIWYG-Editor">WYSIWYG editor</a> for writing articles on our site.
+            Version 1.0 is available for
+            download. We continue developing the Stark editor.</p>
+
+        <h2><a name="WYSIWYG-Editor-Customization">WYSIWYG Editor Customization</a></h2>
+        <p>Although many WYSIWYG text editors offer you customization through JavaScript, as if it is supposed to be
+            more
+            convenient, we have a different approach and let you customize the Stark editor directly through HTML and
+            CSS.
+        </p>
+        <p>Customization of our program is easy: you can delete the features you don’t need in the HTML code and make a
+            tiny
+            editor for comments, or we already have a light version of the Stark editor.</p>
+    </section>
+
+    <section class='bg-content box-shadow'
+        style="font-size:1.2rem;max-width:610px;margin:30px auto;padding:9px 12px 1px 12px;text-align:justify;">
+        <p>Through JavaScript, however, only essential things can be modified during initialization:</p>
+        <ol style="list-style-type: decimal;width:550px;margin:auto;">
+            <li>ID if you have several copies of the Stark Editor on the page, which must be set at the end of the class
+                "se-stark-editor";</li>
+            <li>Default settings for a link — “target” (on the same page or on a new page) and the attribute “noFollow”
+                (yes, no);</li>
+            <li>The length of the history and the time interval during which it is recorded;</li>
+            <li>The length of tabulation.</li>
+            <li>The limit for the text length.</li>
+        </ol>
+        <br />
+        <p><span style="font-weight: 700;">The example of initialization:</span></p>
+        <p style="font-family: 'Courier New', Courier, monospace;text-align:left;font-size:1rem;">let seEditor = new
+            StarkEditor({<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id: “”,<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;anchor: {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;target: false,<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;noFollow: false<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;history: { <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxLength: 500,<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;timerInterval: 250<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tab: 4,<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;limit: 15000<br />
+            &nbsp;&nbsp;&nbsp;})</p>
+        <p>Controls, buttons should not change the name of the first class, this class is an identifier for JavaScript.
+        </p>
+        <p>We hope you’ll enjoy using the Stark editor. If you appreciate our work, we’ll appreciate your donation as
+            well. If you have questions, contact us.</p>
+        <!--     <div style="text-align: center;">
+        <iframe
+            src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=for%20development&targets-hint=&default-sum=300&button-text=14&hint=&successURL=&quickpay=shop&account=410015154315653"
+            width="172" height="222" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+    </div> -->
+    </section>
+
+
+    <script src="https://www.fastchooser.com/outer/js/stark-editor.js" defer></script>
+
+    <script>
+        window.onload = function () {
+            let sEditor1 = new StarkEditor({
+                id: "1", // adds to the end of class name, .se-stark-editor[id]
+                anchor: {
+                    target: false, noFollow: false
+                },
+                history: { maxLength: 50, timerInterval: 200 },
+                tab: 4,
+                limit: 1000 // limit for text length, symbols                                
+            })
+        } // onload
+    </script>
 </body>
 
 </html>
