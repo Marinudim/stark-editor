@@ -3,6 +3,6 @@ Stark is a free rich text editor for websites, a super simple, easy-to-use, tiny
 
 https://www.fastchooser.com/Rich-Text-Editor
 
-https://marinudim.github.io/stark-editor/
-
 ![1 copy](https://www.fastchooser.com/pic/rich-text-editor.jpg)
+
+

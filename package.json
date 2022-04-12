@@ -1,0 +1,24 @@
+{
+  "name": "stark-editor",
+  "version": "1.0.0",
+  "description": "Stark is a free rich text editor for websites, a super simple, easy-to-use, tiny, and lightweight WYSIWYG editor, free from heavy libraries (written in vanilla JavaScript) and superfluous features like tables, histograms, charts, or diagrams.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Marinudim/stark-editor.git"
+  },
+  "keywords": [
+    "rich text editor",
+    "WYSIWYG editor",
+    "text editor"
+  ],
+  "author": "Dmitry Khramov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Marinudim/stark-editor/issues"
+  },
+  "homepage": "https://github.com/Marinudim/stark-editor#readme"
+}
